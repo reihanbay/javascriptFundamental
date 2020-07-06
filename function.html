@@ -3,10 +3,13 @@
     <head>
     </head>
     <body>
+        <p id="name"></p>
+        <p id="param"></p>
+        <p id="param2"></p>
         <script>
             // function
             function add(){
-                return 1+2;
+                return 1+3;
             }
             document.write("hasilnya"+add()+"<br/>");
             
@@ -18,6 +21,34 @@
                 return satu+2;
             }
             document.write("hasil 1+2 ="+f2(one))
+
+
+            // membuatfunction
+            var text= "test"
+            printText= () =>{
+                alert('Yoi')
+                document.getElementById ('name').innerHTML = text
+            }
+
+            // memanggil function
+            printText()
+
+            //parameter
+            param = (nama) =>{
+                var text = nama + "paramete satu"
+                document.getElementById('param').innerHTML = text;
+            }
+
+            var nama = "njajal"
+            param(nama + " disit ")
+
+
+            //param lebih dari satu
+            _param = (nama1, nama2) =>{
+                var param = nama1 + nama2
+                document.getElementById("param2").innerHTML = param
+            }
+            _param("Raditya ", "Dika")
         </script>
     </body>
 </html>
